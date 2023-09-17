@@ -1,4 +1,5 @@
 //Para segunda pre entrega. Carrito de venta de vehiculos Toyota
+// me traigo lo que necesito del html con dom, no entraba pero bueno, ya lo tenia medio armado con los ejemplos.
 const cards = document.getElementById('cards')
 const templateCard = document.getElementById('template-card').content
 const items = document.getElementById('items')
@@ -24,10 +25,10 @@ cards.addEventListener('click', e =>{
 items.addEventListener('click', e=>{
 	btnAccion(e)
 })
-
+// si bien no entraba me parecio mas real que ya ponga algunos productos con JSON
 const fetchData = async()=>{
 	try{
-		const res = await fetch('productos.json')
+		const res = await fetch('vehiculos.json')
 		const data = await res.json()
 		pintarCard(data)
 
